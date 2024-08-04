@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnStartPermission.setOnClickListener{
             checkAndRequestLocationPermission()
         }
+        getCurrentLocation()
     }
 
     private fun getCurrentLocation() {
@@ -72,7 +73,7 @@ class MainActivity : AppCompatActivity() {
             requestPermissionsLauncher.launch(arrayOf(ACCESS_FINE_LOCATION))
         } else {
             // Quyền đã được cấp, thực hiện hành động cần thiết
-            getCurrentLocation()
+
         }
     }
 }
